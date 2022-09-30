@@ -328,6 +328,7 @@ a {
 .container .main-register>form .your-name-register .last-name,
 .container .main-register>form .your-name-register .first-name {
     position: relative;
+    width: 100%;
 }
 
 .container .main-register>form .your-name-register .last-name>label,
@@ -341,6 +342,7 @@ a {
 .container .main-register>form .phone-number-country .your-country,
 .container .main-register>form .phone-number-country .phone-number {
     position: relative;
+    width: 100%;
 }
 
 .container .main-register>form .phone-number-country .phone-number>label {
@@ -410,16 +412,18 @@ a {
 }
 
 .container .main-register>form .pass-word-register #true {
-color: #519259;
-border-color: red;
+    color: #519259;
+    border-color: red;
 }
 
 .container .main-register>form .pass-word-register .pass-word-confirm,
 .container .main-register>form .pass-word-register .pass-word-one {
     position: relative;
+    width: 100%;
 }
-.container .main-register>form .pass-word-register .pass-word-confirm >p,
-.container .main-register>form .pass-word-register .pass-word-one >p{
+
+.container .main-register>form .pass-word-register .pass-word-confirm>p,
+.container .main-register>form .pass-word-register .pass-word-one>p {
     position: absolute;
     bottom: 0;
     left: 20px;
@@ -467,7 +471,7 @@ border-color: red;
     display: flex;
     align-items: center;
     padding: 10px 0px;
-    margin: 10px 0px;
+    margin: auto;
 
 }
 
@@ -515,6 +519,29 @@ border-color: red;
     flex: 1.5;
     background-color: var(--link-colors);
     color: var(--price-bakcground-second-color);
+}
+
+@media (max-width: 767px) {
+
+    .container .main-register>form .pass-word-register,
+    .container .main-register>form .phone-number-country,
+    .container .main-register>form .your-name-register {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container .main-register>form .pass-word-register .pass-word-one,
+    .container .main-register>form .phone-number-country .phone-number,
+    .container .main-register>form .phone-number-country .your-country,
+    .container .main-register>form input:not(.container .main-register>form .privacy-policy input) {
+        width: 100%;
+    }
+
+    .container .main-register>form .pass-word-register .pass-word-one>label,
+    .container .main-register>form .pass-word-register .pass-word-confirm>label,
+    .container .main-register>form .mail-address label {
+        left: 10%;
+    }
 }
 
 /* End Register */
